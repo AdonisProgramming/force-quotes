@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,45 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "banner banner banner banner"
+    "left characters characters right"
+    "left quote quote right"
+    "left quote quote right"
+    "footer footer footer footer";
+}
+
+.banner {
+  grid-area: banner;
+  background-image: url('./resources/bannerImage.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.characters {
+  grid-area: characters;
+}
+
+.quote {
+  grid-area: quote;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
 }
