@@ -74,7 +74,7 @@ function App() {
          <div className="banner">
             <Banner />
          </div>
-         <div className="characters">
+         <div className="characters" style={charactersStyle}>
             <div id='goodGuys'>
                <ul>
                   <DropdownButton id={"republicButton"} title={'The Republic'}>
@@ -82,7 +82,7 @@ function App() {
                         <Dropdown.Item key={item.character} href="#/action-1" onClick={getSelection}>{item.character}</Dropdown.Item>
                      ))}
                   </DropdownButton>
-               </ul>
+               </ul >
                <ul>
                   <DropdownButton id={"rebellionButton"} title={'The Rebellion'} >
                      {uniqueRebellionCharacterList.map(item => (
@@ -116,6 +116,13 @@ function App() {
          <div className="right"></div>
       </div>
    );
+}
+
+const charactersStyle = {
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   paddingTop: '1rem',
 }
 
 export default App;

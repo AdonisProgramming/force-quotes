@@ -1,4 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "SFDistantGalaxy";
+  src: local("SFDistantGalaxy"),
+    url('./fonts/SFDistantGalaxy.ttf') format("truetype");
+  font-weight: normal;
+}
 
 body {
   margin: 0;

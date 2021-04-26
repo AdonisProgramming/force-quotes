@@ -10,18 +10,24 @@ const Quote = ({ selectedCharacter, selectedFaction, selectedList }) => {
     const characterQuotes = filteredCharacterList.map(item => item.quote);
 
     const requestNewQuote = () => {
-        const randomNumber = Math.floor (Math.random() * characterQuotes.length)
+        const randomNumber = Math.floor(Math.random() * characterQuotes.length)
         genNewQuote(characterQuotes[randomNumber]);
     }
 
     return (
-        <div>
-            <h5>character: {selectedCharacter}</h5>
-            <h5>faction: {selectedFaction}</h5>
+        <div style={quoteStyle}>
             <Button variant="primary" onClick={requestNewQuote}>New Quote</Button>
             <h3>{newQuote}</h3>
         </div >
+        
     )
+}
+
+const quoteStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: '2rem',
 }
 
 export default Quote

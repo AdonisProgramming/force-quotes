@@ -2,17 +2,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Banner = () => {
     return (
-        <div style={bannerStyle}>
+        <div >
+            <h1 style={bannerText}>Force Quotes</h1>
         </div>
     )
 }
 
 
-const bannerStyle = {
+const bannerText = {
     margin: 'auto',
-    textAlign: 'center',
-    border: '3px solid green',
     padding: '40px',
+    display: 'flex',
+    justifyContent: 'center',
+    color: 'white',
+    fontFamily: 'SFDistantGalaxy',
+    whiteSpace: 'nowrap',
 
 }
 
